@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bertina Ayuure | QA Engineer</title>
+  <meta name="description" content="QA Engineer who builds test automation and AI-assisted testing tools. 4 years testing web, mobile and APIs. Based in Accra, Ghana, working European hours.">
+  <meta property="og:title" content="Bertina Ayuure | QA Engineer">
+  <meta property="og:description" content="QA Engineer who builds test automation and AI-assisted testing tools.">
+  <meta property="og:type" content="website">
+  <meta name="color-scheme" content="light dark">
+  <!-- Apply the saved theme before the page paints, so there is no flash of the wrong theme -->
+  <script>try { var t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}</script>
+  <!-- A reload starts at the top: no restored scroll position and no jump back to a #section.
+       A shared link such as /#work still opens at that section because it is not a reload. -->
+  <script>
+    history.scrollRestoration = 'manual';
+    var navEntry = performance.getEntriesByType('navigation')[0];
+    if (navEntry && navEntry.type === 'reload' && location.hash) {
+      history.replaceState(null, '', location.pathname + location.search);
+    }
+  </script>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%232b67c6'/%3E%3Ctext x='16' y='21' font-family='Arial' font-size='14' font-weight='700' fill='white' text-anchor='middle'%3EBA%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="wrap nav" aria-label="Main">
+      <a class="brand" href="#top">Bertina Ayuure</a>
+      <ul>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#toolbox">Toolbox</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="theme-toggle" id="theme-toggle" type="button" hidden></button>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero wrap" id="top">
+      <p class="eyebrow">Quality Assurance Engineer</p>
+      <h1>I build test automation and AI-assisted testing tools that help teams release with confidence.</h1>
+      <p class="lead">I have 4 years of experience testing web apps, Android and iOS apps, and REST APIs for enterprise teams.</p>
+      <p class="meta">Accra, Ghana · GMT, working European hours · Open to remote QA / SDET roles</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="assets/Bertina_Ayuure_CV.pdf" download>Download CV</a>
+        <a class="btn" href="mailto:ayuurebertina@gmail.com">Email me</a>
+        <a class="btn" href="https://linkedin.com/in/bertina-ayuure" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+      <div class="badge">
+        <span class="badge-seal"><img src="assets/playwright-logo.svg" alt="Playwright logo" width="34" height="34"></span>
+        <p class="badge-text">
+          <span class="badge-label"><span aria-hidden="true">✓</span> Tested with</span>
+          <strong class="badge-name">Playwright</strong>
+          <span class="badge-sub">plus axe accessibility and Lighthouse checks</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- What I do -->
+    <section class="wrap section" aria-labelledby="do-title">
+      <h2 id="do-title">What I do</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Test automation</h3>
+          <p>I write end-to-end and UI tests with Playwright, Selenium (Selenide) and Cypress, and I design automation frameworks from scratch.</p>
+        </div>
+        <div class="card">
+          <h3>API and data testing</h3>
+          <p>I test REST APIs with RestAssured and Postman, and I check the data in MySQL to confirm that what the UI shows is what the database stores.</p>
+        </div>
+        <div class="card">
+          <h3>Quality beyond features</h3>
+          <p>I also test accessibility, performance, cross-browser behaviour, visual regressions and security (SQL injection).</p>
+        </div>
+      </div>
+      <div class="how">
+        <h3>How I work</h3>
+        <p>I work in cross-functional Agile/Scrum teams of 5–7 people. These teams include a UI designer, at least two QA engineers and 3–5 developers, and some also have a dedicated DevOps engineer, a product owner, a scrum master and a dev manager. I help plan testing from the requirements stage, report clear defects and support weekly production releases.</p>
+      </div>
+    </section>
+
+    <!-- Featured work -->
+    <section class="wrap section" id="work" aria-labelledby="work-title">
+      <h2 id="work-title">Featured work</h2>
+
+      <article class="case" id="case-ai">
+        <p class="case-tag">DevOps Africa · 2025 – present</p>
+        <h3>AI-powered regression impact analysis</h3>
+        <dl>
+          <dt>Problem</dt>
+          <dd>When code changed, QA could not easily see which other parts of a connected system it might affect, or whether the change had reached the QA environment yet.</dd>
+          <dt>What I did</dt>
+          <dd>
+            <ul>
+              <li>I designed and built a tool, powered by Claude, that analyses source-code changes and flags regression risks across connected system components.</li>
+              <li>I connected it to GitHub and Jira so it links tickets, code changes and system dependencies. This shows the potential blast radius of each change.</li>
+              <li>I used GitHub Actions data to confirm which changes had been deployed to the QA environment.</li>
+              <li>I made it read-only, so it can never change code, tickets or deployments.</li>
+            </ul>
+          </dd>
+        </dl>
+        <div class="flow" role="img" aria-label="Diagram: Jira tickets, GitHub code changes and GitHub Actions deployments feed into Claude, which produces a regression risk report for QA.">
+          <div class="flow-in">
+            <span>Jira tickets</span>
+            <span>GitHub code changes</span>
+            <span>GitHub Actions deployments</span>
+          </div>
+          <span class="flow-arrow" aria-hidden="true">→</span>
+          <span class="flow-mid">Claude analysis</span>
+          <span class="flow-arrow" aria-hidden="true">→</span>
+          <span class="flow-out">Regression risk report for QA</span>
+        </div>
+        <dl>
+          <dt>Result</dt>
+          <dd>The team can see the regression risk of each change more clearly, which helps us focus testing on the areas most likely to break.</dd>
+        </dl>
+        <ul class="tags" aria-label="Tools">
+          <li>Claude</li><li>GitHub</li><li>Jira</li><li>GitHub Actions</li>
+        </ul>
+      </article>
+
+      <article class="case" id="case-framework">
+        <p class="case-tag">AmaliTech · for a major European telecom provider</p>
+        <h3>Test automation framework built from scratch</h3>
+        <dl>
+          <dt>Problem</dt>
+          <dd>The client's employee onboarding product had an admin web portal, a Flutter web app and a mobile app. It needed reliable regression coverage across all of them, and the admin portal had no automation framework.</dd>
+          <dt>What I did</dt>
+          <dd>
+            <ul>
+              <li>I designed and built a Selenide and TestNG framework in Java from scratch, and I used it to automate the key user journeys and interface behaviour of the admin portal.</li>
+              <li>I automated REST API tests with RestAssured for the endpoints behind the onboarding flows.</li>
+              <li>I tested the iOS and Android onboarding flows manually to make sure new hires had a smooth experience.</li>
+              <li>I checked that the Flutter web and mobile apps met the functional requirements on every platform.</li>
+              <li>I used GitHub Copilot to write test scaffolding and assertion boilerplate faster.</li>
+            </ul>
+          </dd>
+          <dt>Result</dt>
+          <dd>The admin portal's key journeys and the onboarding APIs were covered by automated tests that could be re-run on every release, which left manual testing time for the mobile apps.</dd>
+        </dl>
+        <ul class="tags" aria-label="Tools">
+          <li>Java</li><li>Selenide</li><li>TestNG</li><li>RestAssured</li><li>iOS</li><li>Android</li><li>Flutter</li><li>GitHub Copilot</li>
+        </ul>
+      </article>
+
+      <article class="case" id="case-purplewave">
+        <p class="case-tag">DevOps Africa · for PurpleWave Auction · 2025 – present</p>
+        <h3>End-to-end, API and database testing for an inventory system</h3>
+        <dl>
+          <dt>Problem</dt>
+          <dd>PurpleWave's inventory system manages auction listings in a shared monorepo and is released to production every week. A defect in a listing could come from the UI, the API or the database, so every layer needed testing.</dd>
+          <dt>What I did</dt>
+          <dd>
+            <ul>
+              <li>I write and maintain Playwright end-to-end tests for the listing workflows, adding coverage without breaking a shared codebase.</li>
+              <li>I test REST APIs with Postman, checking request and response structures, status codes and error handling.</li>
+              <li>I query the MySQL database to confirm that listing data is stored and updated correctly after UI and API actions.</li>
+              <li>I run SQL injection tests on input fields and API parameters to confirm that attackers cannot read extra data or change records.</li>
+              <li>I use the Network tab in Chrome DevTools to find out whether a defect is in the frontend or the backend before I report it.</li>
+            </ul>
+          </dd>
+          <dt>Result</dt>
+          <dd>Every feature is integration-tested and validated before its weekly production release. My defect reports name the layer at fault, so developers know where to start.</dd>
+        </dl>
+        <ul class="tags" aria-label="Tools">
+          <li>Playwright</li><li>Postman</li><li>MySQL</li><li>Chrome DevTools</li><li>SQL injection testing</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- Experience -->
+    <section class="wrap section" id="experience" aria-labelledby="exp-title">
+      <h2 id="exp-title">Experience</h2>
+      <ol class="timeline">
+        <li>
+          <h3>QA Engineer · DevOps Africa Limited</h3>
+          <p class="when">Accra, Ghana · September 2025 – present</p>
+          <ul>
+            <li><a href="#case-ai">AI-powered regression impact analysis and risk assessment</a></li>
+            <li><a href="#case-purplewave">Inventory management system for PurpleWave Auction</a></li>
+          </ul>
+        </li>
+        <li>
+          <h3>QA Engineer · AmaliTech</h3>
+          <p class="when">Takoradi, Ghana · November 2022 – August 2025</p>
+          <ul>
+            <li><a href="#case-framework">Onboarding application for a major European telecom provider</a></li>
+            <li><strong>Global careers platform</strong> for the same provider: accessibility and performance audits with Google Lighthouse to meet corporate and EU compliance standards, cross-browser and mobile testing on LambdaTest, visual regression tests, and edge-case test scenarios generated and reviewed with ChatGPT.</li>
+            <li><strong>Compliance questionnaire management system:</strong> regression testing after new features were added, plus clear test reports for stakeholders.</li>
+          </ul>
+        </li>
+        <li>
+          <h3>BSc Computer Science and Engineering</h3>
+          <p class="when">University of Mines and Technology, Ghana · 2018 – 2022</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Toolbox -->
+    <section class="wrap section" id="toolbox" aria-labelledby="tools-title">
+      <h2 id="tools-title">Toolbox</h2>
+      <div class="toolbox">
+        <div><h3>Test automation</h3><ul class="tags"><li>Playwright</li><li>Selenium (Selenide)</li><li>Cypress</li><li>RestAssured</li><li>Supertest</li><li>TestNG</li></ul></div>
+        <div><h3>API testing</h3><ul class="tags"><li>REST APIs</li><li>Postman</li><li>Chrome DevTools</li></ul></div>
+        <div><h3>Databases</h3><ul class="tags"><li>MySQL</li><li>MongoDB</li></ul></div>
+        <div><h3>Programming</h3><ul class="tags"><li>Java</li></ul></div>
+        <div><h3>Cross-browser and quality</h3><ul class="tags"><li>BrowserStack</li><li>LambdaTest</li><li>Google Lighthouse</li><li>Visual regression</li></ul></div>
+        <div><h3>Tools and CI</h3><ul class="tags"><li>Jira</li><li>Xray</li><li>Confluence</li><li>Git</li><li>GitHub Actions</li></ul></div>
+        <div><h3>AI tools</h3><ul class="tags"><li>Claude</li><li>GitHub Copilot</li><li>ChatGPT</li></ul></div>
+        <div><h3>Process</h3><ul class="tags"><li>Agile/Scrum</li><li>Test planning</li><li>Test strategy</li><li>Test case design</li><li>Defect tracking</li></ul></div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="wrap section contact" id="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title">Let's work together</h2>
+      <p>I'm open to QA and SDET roles, remote or hybrid, with teams working European hours.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="mailto:ayuurebertina@gmail.com">ayuurebertina@gmail.com</a>
+        <a class="btn" href="https://linkedin.com/in/bertina-ayuure" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" href="assets/Bertina_Ayuure_CV.pdf" download>Download CV</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap footer">
+    <p>© 2026 Bertina Ayuure</p>
+  </footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script>
+    // The toggle stays hidden without JavaScript; the page then just follows the system theme.
+    var root = document.documentElement;
+    var btn = document.getElementById('theme-toggle');
+    function isDark() {
+      return root.dataset.theme ? root.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+    }
+    function render() {
+      var dark = isDark();
+      btn.textContent = dark ? '☀︎' : '☾︎';
+      btn.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
+      btn.title = btn.getAttribute('aria-label');
+    }
+    btn.addEventListener('click', function () {
+      var next = isDark() ? 'light' : 'dark';
+      root.dataset.theme = next;
+      try { localStorage.setItem('theme', next); } catch (e) {}
+      render();
+    });
+    matchMedia('(prefers-color-scheme: dark)').addEventListener('change', render);
+    btn.hidden = false;
+    render();
+
+    // Email links open the mail app as normal. A page cannot tell whether a mail app actually opened
+    // (many webmail users have none set up), so every click also copies the address and says so.
+    var toast = document.getElementById('toast');
+    var toastTimer;
+    function showToast(email, copied) {
+      var address = document.createElement('strong');
+      address.textContent = email;
+      toast.textContent = copied
+        ? 'Email address copied. If your email app didn’t open, paste it into Gmail, Outlook or any email service: '
+        : 'If your email app didn’t open, you can email me at ';
+      toast.append(address);
+      toast.classList.add('show');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(function () { toast.classList.remove('show'); toast.textContent = ''; }, 10000);
+    }
+    document.querySelectorAll('a[href^="mailto:"]').forEach(function (link) {
+      link.addEventListener('click', function () {
+        var email = link.getAttribute('href').slice('mailto:'.length);
+        Promise.resolve()
+          .then(function () { return navigator.clipboard.writeText(email); })
+          .then(function () { showToast(email, true); }, function () { showToast(email, false); });
+      });
+    });
+  </script>
+</body>
+</html>
