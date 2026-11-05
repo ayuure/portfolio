@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 const EMAIL = 'mailto:ayuurebertina@gmail.com';
-const LINKEDIN = 'https://linkedin.com/in/bertina-ayuure';
+const LINKEDIN = 'https://www.linkedin.com/in/bertina-ayuure-1303451b6/';
 
 test.describe('Home page', () => {
   test.beforeEach(async ({ page }) => {
