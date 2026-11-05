@@ -47,6 +47,9 @@
 * { box-sizing: border-box; }
 
 html { scroll-behavior: smooth; }
+/* Leave room for the sticky header when jumping to a section (header is taller on phones) */
+section[id], article[id] { scroll-margin-top: 80px; }
+@media (max-width: 600px) { section[id], article[id] { scroll-margin-top: 110px; } }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
 body {
@@ -137,6 +140,12 @@ h3 { font-size: 1.1rem; }
 .card, .how { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 20px 22px; }
 .card p, .how p { margin: 0; color: var(--muted); }
 .how { margin-top: 16px; }
+.how-list {
+  list-style: none; padding: 0; margin: 18px 0 0;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px 28px;
+}
+.how-list li { color: var(--muted); padding-left: 14px; border-left: 3px solid var(--accent); }
+.how-list strong { display: block; color: var(--text); margin-bottom: 2px; }
 
 /* Case studies */
 .case { border: 1px solid var(--border); border-radius: 12px; padding: 28px; margin-bottom: 24px; }
@@ -146,6 +155,8 @@ h3 { font-size: 1.1rem; }
 .case dt { font-weight: 700; color: var(--accent); font-size: .85rem; text-transform: uppercase; letter-spacing: .06em; margin-top: 18px; }
 .case dd { margin: 4px 0 0; }
 .case dd ul { margin: 4px 0 0; padding-left: 1.2em; }
+.case h4 { font-size: 1rem; margin: 14px 0 4px; }
+.case dd h4:first-child { margin-top: 6px; }
 .case dd li { margin-bottom: 4px; }
 
 .tags { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 20px 0 0; }

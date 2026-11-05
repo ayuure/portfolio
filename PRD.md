@@ -134,3 +134,7 @@ These are your strongest differentiators. P0 items go in the first version.
 6. **P1 items:** the self-testing portfolio and the sample automation repo come after launch.
 
 Also decided: the phone number is left off the site to avoid spam. It stays on the downloadable CV.
+
+## 11. To fix later
+
+- **CV LinkedIn link:** the CV PDF links to `linkedin.com/in/bertina-ayuure`, which does not work. Update it to `https://www.linkedin.com/in/bertina-ayuure-1303451b6/`, export a new PDF and replace `assets/Bertina_Ayuure_CV.pdf`. (The site's links were fixed on 5 Nov 2026.)

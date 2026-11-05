@@ -80,7 +80,12 @@
       </div>
       <div class="how">
         <h3>How I work</h3>
-        <p>I work in cross-functional Agile/Scrum teams of 5–7 people. These teams include a UI designer, at least two QA engineers and 3–5 developers, and some also have a dedicated DevOps engineer, a product owner, a scrum master and a dev manager. I help plan testing from the requirements stage, report clear defects and support weekly production releases.</p>
+        <p>I work in Agile/Scrum teams alongside developers, designers, product owners, scrum masters and DevOps engineers.</p>
+        <ul class="how-list">
+          <li><strong>Involved early</strong> I review requirements and plan testing from the start, not after the code is written.</li>
+          <li><strong>Clear defects</strong> My bug reports include the steps, the evidence and whether the fault is in the frontend or the backend.</li>
+          <li><strong>Release-ready</strong> I run integration and regression testing before every weekly production release.</li>
+        </ul>
       </div>
     </section>
 
@@ -124,14 +129,15 @@
         </ul>
       </article>
 
-      <article class="case" id="case-framework">
-        <p class="case-tag">AmaliTech · for a major European telecom provider</p>
-        <h3>Test automation framework built from scratch</h3>
+      <article class="case" id="case-telecom">
+        <p class="case-tag">AmaliTech · for a major European telecom provider · 2022 – 2025</p>
+        <h3>Automation and quality testing across two telecom platforms</h3>
         <dl>
           <dt>Problem</dt>
-          <dd>The client's employee onboarding product had an admin web portal, a Flutter web app and a mobile app. It needed reliable regression coverage across all of them, and the admin portal had no automation framework.</dd>
+          <dd>The client needed two products tested. Its employee onboarding product had an admin web portal, a Flutter web app and a mobile app, and the admin portal had no automation framework. Its global careers website was used across many regions, so it had to work on every browser and device and meet corporate and EU compliance standards.</dd>
           <dt>What I did</dt>
           <dd>
+            <h4>Onboarding app: admin portal, Flutter web and mobile app</h4>
             <ul>
               <li>I designed and built a Selenide and TestNG framework in Java from scratch, and I used it to automate the key user journeys and interface behaviour of the admin portal.</li>
               <li>I automated REST API tests with RestAssured for the endpoints behind the onboarding flows.</li>
@@ -139,12 +145,20 @@
               <li>I checked that the Flutter web and mobile apps met the functional requirements on every platform.</li>
               <li>I used GitHub Copilot to write test scaffolding and assertion boilerplate faster.</li>
             </ul>
+            <h4>Global careers website</h4>
+            <ul>
+              <li>I tested the site across regions, browsers and devices.</li>
+              <li>I ran accessibility and performance audits with Google Lighthouse, helping the team meet corporate and EU compliance standards.</li>
+              <li>I ran cross-browser and mobile compatibility testing on LambdaTest.</li>
+              <li>I built and maintained visual regression tests to catch UI inconsistencies before deployment.</li>
+              <li>I used ChatGPT to generate and review complex edge-case test scenarios, widening test coverage.</li>
+            </ul>
           </dd>
           <dt>Result</dt>
-          <dd>The admin portal's key journeys and the onboarding APIs were covered by automated tests that could be re-run on every release, which left manual testing time for the mobile apps.</dd>
+          <dd>The onboarding product's key journeys and APIs were covered by automated tests that could be re-run on every release, which left manual testing time for the mobile apps. The careers website was audited for accessibility and performance and checked across browsers and devices, and visual regression tests caught UI issues before they reached users.</dd>
         </dl>
         <ul class="tags" aria-label="Tools">
-          <li>Java</li><li>Selenide</li><li>TestNG</li><li>RestAssured</li><li>iOS</li><li>Android</li><li>Flutter</li><li>GitHub Copilot</li>
+          <li>Java</li><li>Selenide</li><li>TestNG</li><li>RestAssured</li><li>iOS</li><li>Android</li><li>Flutter</li><li>Google Lighthouse</li><li>LambdaTest</li><li>Visual regression</li><li>GitHub Copilot</li><li>ChatGPT</li>
         </ul>
       </article>
 
@@ -189,8 +203,7 @@
           <h3>QA Engineer · AmaliTech</h3>
           <p class="when">Takoradi, Ghana · November 2022 – August 2025</p>
           <ul>
-            <li><a href="#case-framework">Onboarding application for a major European telecom provider</a></li>
-            <li><strong>Global careers platform</strong> for the same provider: accessibility and performance audits with Google Lighthouse to meet corporate and EU compliance standards, cross-browser and mobile testing on LambdaTest, visual regression tests, and edge-case test scenarios generated and reviewed with ChatGPT.</li>
+            <li><a href="#case-telecom">Onboarding application and global careers website for a major European telecom provider</a></li>
             <li><strong>Compliance questionnaire management system:</strong> regression testing after new features were added, plus clear test reports for stakeholders.</li>
           </ul>
         </li>

@@ -52,6 +52,16 @@ test.describe('Home page', () => {
     await expect.poll(() => page.evaluate(() => window.scrollY)).toBe(0);
   });
 
+  test('the sticky header does not cover a section after jumping to it', async ({ page }) => {
+    await page.locator('#experience').getByRole('link', { name: /telecom provider/ }).click();
+    const heading = page.locator('#case-telecom h3');
+    await expect(heading).toBeInViewport();
+    await expect.poll(async () => {
+      const headerBottom = (await page.locator('.site-header').boundingBox()).y + (await page.locator('.site-header').boundingBox()).height;
+      return (await heading.boundingBox()).y >= headerBottom;
+    }, { message: 'case study title is hidden under the header' }).toBe(true);
+  });
+
   test('every in-page link points to a section that exists', async ({ page }) => {
     const hrefs = await page.locator('a[href^="#"]').evaluateAll((links) =>
       links.map((a) => a.getAttribute('href')).filter((href) => href !== '#'),
@@ -67,7 +77,7 @@ test.describe('Home page', () => {
     await expect(cases).toHaveCount(3);
     for (const heading of [
       'AI-powered regression impact analysis',
-      'Test automation framework built from scratch',
+      'Automation and quality testing across two telecom platforms',
       'End-to-end, API and database testing for an inventory system',
     ]) {
       await expect(page.getByRole('heading', { name: heading })).toBeVisible();
