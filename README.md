@@ -1,5 +1,7 @@
 # Bertina Ayuure – QA Engineer Portfolio
 
+[![Tests](https://github.com/ayuure/portfolio/actions/workflows/test.yml/badge.svg)](https://github.com/ayuure/portfolio/actions/workflows/test.yml)
+
 My portfolio site: plain HTML and CSS, with automated tests that run on every change.
 
 ## How the site is tested

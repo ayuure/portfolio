@@ -23,6 +23,7 @@ test.describe('Home page', () => {
     const logo = badge.getByRole('img', { name: 'Playwright logo' });
     await expect(logo).toBeVisible();
     expect(await logo.evaluate((img) => img.complete && img.naturalWidth > 0), 'logo image loaded').toBe(true);
+    await expect(badge).toHaveAttribute('href', 'https://github.com/ayuure/portfolio/actions/workflows/test.yml');
   });
 
   test('every menu link jumps to its section', async ({ page }) => {

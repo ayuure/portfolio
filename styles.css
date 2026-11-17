@@ -124,7 +124,9 @@ h3 { font-size: 1.1rem; }
   padding: 10px 20px 10px 10px; border-radius: 14px;
   border: 2px solid var(--accent); background: var(--accent-soft);
   box-shadow: 0 0 0 4px var(--bg), 0 0 0 5px var(--border); /* double ring, like a seal */
+  text-decoration: none;
 }
+.badge:hover .badge-name { text-decoration: underline; }
 /* White disc in both themes: the logo's dark outlines vanish on a dark background */
 .badge-seal {
   flex: none; display: grid; place-items: center; width: 52px; height: 52px;
