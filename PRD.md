@@ -137,4 +137,4 @@ Also decided: the phone number is left off the site to avoid spam. It stays on t
 
 ## 11. To fix later
 
-- **CV LinkedIn link:** the CV PDF links to `linkedin.com/in/bertina-ayuure`, which does not work. Update it to `https://www.linkedin.com/in/bertina-ayuure-1303451b6/`, export a new PDF and replace `assets/Bertina_Ayuure_CV.pdf`. (The site's links were fixed on 5 Nov 2026.)
+- **CV LinkedIn link:** resolved 17 Nov 2026. The LinkedIn custom URL was changed to `linkedin.com/in/bertina-ayuure`, which is the address the CV already uses, and the site was updated to match.
