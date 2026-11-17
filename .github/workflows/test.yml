@@ -1,0 +1,36 @@
+name: Automation Pipeline
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  schedule:
+    - cron: "0 0 * * *" # Runs every day at midnight
+jobs:
+  playwright:
+    runs-on: ubuntu-latest
+    env:
+      BASE_URL: ${{ github.event_name == 'schedule' && 'https://ayuure.github.io/portfolio/' || '' }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: lts/*
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps
+      - name: Run Playwright tests
+        run: npm test
+      - name: Upload test report
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: playwright-report
+          path: playwright-report/
+          retention-days: 14
