@@ -146,6 +146,10 @@ test('has a preview image for shared links', async ({ page }) => {
   await page.goto('./');
   const image = await page.locator('meta[property="og:image"]').getAttribute('content');
   expect(image).toBe('https://ayuure.github.io/portfolio/assets/og-image.png');
+  // LinkedIn warns when the shared description is under 100 characters; keep it the same as the search one
+  const description = await page.locator('meta[name="description"]').getAttribute('content');
+  await expect(page.locator('meta[property="og:description"]')).toHaveAttribute('content', description);
+  expect(description.length).toBeGreaterThanOrEqual(100);
   // The tag needs the live URL, so check the same file exists in this copy of the site
   const response = await page.request.get('./assets/og-image.png');
   expect(response.ok()).toBe(true);
