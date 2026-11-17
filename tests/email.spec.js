@@ -28,7 +28,7 @@ const emailLinks = [
 for (const { where, section, text } of emailLinks) {
   test(`"${text}" in the ${where} also copies the address and says so`, async ({ page }) => {
     await prepare(page);
-    await page.goto('/');
+    await page.goto('./');
 
     await page.locator(section).getByRole('link', { name: text, exact: true }).click();
 
@@ -42,7 +42,7 @@ for (const { where, section, text } of emailLinks) {
 
 test('if copying is blocked, the message still shows the address', async ({ page }) => {
   await prepare(page, { clipboardFails: true });
-  await page.goto('/');
+  await page.goto('./');
 
   await page.locator('#top').getByRole('link', { name: 'Email me' }).click();
 
@@ -55,7 +55,7 @@ test('if copying is blocked, the message still shows the address', async ({ page
 test('the message goes away after 10 seconds', async ({ page }) => {
   await page.clock.install();
   await prepare(page);
-  await page.goto('/');
+  await page.goto('./');
 
   await page.locator('#top').getByRole('link', { name: 'Email me' }).click();
   const toast = page.getByRole('status');

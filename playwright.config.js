@@ -1,6 +1,9 @@
 import { defineConfig, devices } from '@playwright/test';
 
 const CI = !!process.env.CI;
+// Set BASE_URL to test a deployed copy, e.g. BASE_URL=https://ayuure.github.io/portfolio/ npm test
+// (keep the trailing slash). Without it, the tests start a local server.
+const BASE_URL = process.env.BASE_URL;
 
 export default defineConfig({
   testDir: 'tests',
@@ -9,12 +12,12 @@ export default defineConfig({
   retries: CI ? 1 : 0,
   reporter: CI ? [['github'], ['html', { open: 'never' }]] : [['list'], ['html', { open: 'never' }]],
   use: {
-    baseURL: 'http://localhost:4173',
+    baseURL: BASE_URL || 'http://localhost:4173/',
     trace: 'retain-on-failure',
     screenshot: 'only-on-failure',
   },
   // The site is plain static files, so Python's built-in server is enough (preinstalled on macOS and GitHub runners)
-  webServer: {
+  webServer: BASE_URL ? undefined : {
     command: 'python3 -m http.server 4173',
     url: 'http://localhost:4173',
     reuseExistingServer: !CI,

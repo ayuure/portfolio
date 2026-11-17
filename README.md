@@ -17,6 +17,9 @@ The Playwright tests run in Chrome and Firefox on desktop, and in Safari on an i
 ```bash
 npm install
 npx playwright install
-npm test              # run all tests
+npm test              # run all tests against a local copy
 npm run test:report   # open the HTML report
+
+# run the same tests against the live site
+BASE_URL=https://ayuure.github.io/portfolio/ npm test
 ```

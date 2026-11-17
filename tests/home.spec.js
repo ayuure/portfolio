@@ -5,7 +5,7 @@ const LINKEDIN = 'https://www.linkedin.com/in/bertina-ayuure-1303451b6/';
 
 test.describe('Home page', () => {
   test.beforeEach(async ({ page }) => {
-    await page.goto('/');
+    await page.goto('./');
   });
 
   test('shows who Bertina is and how to reach her without scrolling', async ({ page }) => {
@@ -90,7 +90,7 @@ test.describe('Home page', () => {
     const download = await downloadPromise;
     expect(download.suggestedFilename()).toBe('Bertina_Ayuure_CV.pdf');
 
-    const response = await page.request.get('/assets/Bertina_Ayuure_CV.pdf');
+    const response = await page.request.get('./assets/Bertina_Ayuure_CV.pdf');
     expect(response.ok()).toBe(true);
     expect(response.headers()['content-type']).toBe('application/pdf');
   });
@@ -118,7 +118,7 @@ test.describe('Home page', () => {
 });
 
 test('a shared link to a section still opens at that section', async ({ page }) => {
-  await page.goto('/#work');
+  await page.goto('./#work');
   await expect(page.locator('#work')).toBeInViewport();
 });
 
@@ -126,7 +126,7 @@ test('page loads without errors in the browser console', async ({ page }) => {
   const errors = [];
   page.on('console', (msg) => msg.type() === 'error' && errors.push(msg.text()));
   page.on('pageerror', (err) => errors.push(err.message));
-  await page.goto('/');
+  await page.goto('./');
   await page.waitForLoadState('networkidle');
   expect(errors).toEqual([]);
 });

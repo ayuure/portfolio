@@ -11,7 +11,7 @@ for (const [system, systemBg, otherBg] of [['light', LIGHT, DARK], ['dark', DARK
     test.use({ colorScheme: system });
 
     test.beforeEach(async ({ page }) => {
-      await page.goto('/');
+      await page.goto('./');
     });
 
     test('follows the device setting by default', async ({ page }) => {
