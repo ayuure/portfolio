@@ -131,3 +131,13 @@ test('page loads without errors in the browser console', async ({ page }) => {
   await page.waitForLoadState('networkidle');
   expect(errors).toEqual([]);
 });
+
+test('tells search engines the official address and who the page is about', async ({ page }) => {
+  const SITE = 'https://ayuure.github.io/portfolio/';
+  await page.goto('./');
+  await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href', SITE);
+  // A typo here fails silently in browsers, so check it is valid JSON with the right details
+  const person = JSON.parse(await page.locator('script[type="application/ld+json"]').textContent());
+  expect(person).toMatchObject({ '@type': 'Person', name: 'Bertina Ayuure', url: SITE });
+  expect(person.sameAs).toContain(LINKEDIN);
+});
