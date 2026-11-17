@@ -141,3 +141,13 @@ test('tells search engines the official address and who the page is about', asyn
   expect(person).toMatchObject({ '@type': 'Person', name: 'Bertina Ayuure', url: SITE });
   expect(person.sameAs).toContain(LINKEDIN);
 });
+
+test('has a preview image for shared links', async ({ page }) => {
+  await page.goto('./');
+  const image = await page.locator('meta[property="og:image"]').getAttribute('content');
+  expect(image).toBe('https://ayuure.github.io/portfolio/assets/og-image.png');
+  // The tag needs the live URL, so check the same file exists in this copy of the site
+  const response = await page.request.get('./assets/og-image.png');
+  expect(response.ok()).toBe(true);
+  expect(response.headers()['content-type']).toBe('image/png');
+});
